@@ -14,12 +14,19 @@ function writePassword() {
 
 var generatePassword = function() {
   // prompts for criteria
-  window.alert("include lower case letters?");
-  window.alert("include upper case letters?");
-  window.alert("include numbers?");
-  window.alert("include special characters? (eg. '!', '$', '@')");
-  window.prompt("password length? (between 8-128 characters, input whole number with no commas!)")
+  
+  var criteriaSelect = function() {
+    window.confirm("include lower case letters?");
+    window.confirm("include upper case letters?");
+    window.confirm("include numbers?");
+    window.confirm("include special characters? (eg. '!', '$', '@')");
+    window.prompt("password length? (between 8-128 characters, input whole number with no commas!)");
+  }
+
+  criteriaSelect();
 }
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
